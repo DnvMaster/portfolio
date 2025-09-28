@@ -621,7 +621,10 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Настройки</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Выход</a>
+                        <form method="post" action="{{ route('logout') }}">
+                          @csrf
+                          <button type="submit" class="dropdown-item">{{ __('Выход') }}</button>
+                        </form>
                       </li>
                     </div>
                   </ul>
